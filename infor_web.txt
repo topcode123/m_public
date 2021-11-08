@@ -1,0 +1,59 @@
+Server ID: IX-0286
+Hostname: IX-0286.quadix.co
+
+IP Block
+IP Addresses: 23.172.112.93
+Netmask: 255.255.255.224
+Gateway: 23.172.112.65
+
+Login Credentials
+User: user1
+Password: LEAD837vest!*
+https://jarroba.com/anonymous-scraping-by-tor-network/
+16:5F867EE274D7424D60FC78F0723DEEA6FF75C077BAC3A04526CA84652E
+DRAC Details
+URL: http://156.96.112.142
+User: IX-0286
+Password: jump93street
+-----------------------------------------------------------------------------------------------------
+run mongodb:
+sudo mongod --port 27017 --dbpath /home/user1/data/db1 --replSet rs0 --bind_ip localhost,23.172.112.93
+rs.initiate()
+sudo systemctl restart mongod
+sudo systemctl stop mongod
+> use admin;
+> db.createUser({
+      user: "mdata_admin",
+      pwd: "kalilinux2018",
+      roles: [
+                { role: "userAdminAnyDatabase", db: "admin" },
+                { role: "readWriteAnyDatabase", db: "admin" },
+                { role: "dbAdminAnyDatabase",   db: "admin" }
+             ]
+  });
+sudo nano /etc/mongod.conf
+security:
+    authorization: 'enabled'
+net:
+    port: 27017
+    bindIp: 0.0.0.0   #default value is 127.0.0.1
+security:
+    authorization: 'enabled'
+sudo service mongod restart
+sudo mongod --config /etc/mongod.conf
+----------------------------------------------------------------------------------------------------------
+pip install pysocks
+
+	
+sudo apt-get install libcurl4-openssl-dev
+	
+sudo apt-get install libssl-dev
+pip freeze > requirements.txt
+
+python -m venv mnetwork
+source mnetwork/bin/activate
+----------------------------------------------------------------------------------------------------------
+remote ở máy e luôn đó 
+Login Administrator
+Pass mnetworkQq!@# 
+RDP rdhcm-q22.longvan.net:3178 ( thay vì ip thì nhập cái này )
